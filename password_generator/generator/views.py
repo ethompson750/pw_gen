@@ -4,7 +4,10 @@ import random
 
 # Create your views here.
 def home(request):
-    return render(request, 'generator/home.html', {'password':'vq13498qregb'})
+    return render(request, 'generator/home.html')
+
+def about(request):
+    return render(request, 'generator/about.html')
 
 def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
