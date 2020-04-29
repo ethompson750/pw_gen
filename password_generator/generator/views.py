@@ -3,7 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Hello world!")
-
-def eggs(request):
-    return HttpResponse("Eggs!")
+    return render(request, 'generator/home.html', {'password':'vq13498qregb'})
