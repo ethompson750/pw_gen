@@ -8,7 +8,7 @@ def home(request):
 
 def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
-    length = 10
+    length = int(request.GET.get('length', 12))
 
     pwd = ''
 
