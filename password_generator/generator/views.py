@@ -10,6 +10,15 @@ def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
     length = int(request.GET.get('length', 12))
 
+    if request.GET.get('uppercase', False):
+        characters.extend('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+    if request.GET.get('numbers', False):
+        characters.extend('1234567890')
+
+    if request.GET.get('special', False):
+        characters.extend('!@#$%^&*()')
+
     pwd = ''
 
     for _ in range(length):
